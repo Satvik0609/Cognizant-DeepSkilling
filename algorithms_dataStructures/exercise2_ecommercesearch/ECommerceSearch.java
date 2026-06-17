@@ -1,3 +1,23 @@
+//Big O Notation
+
+//Big O notation is a mathematical representation used to describe the efficiency of an algorithm in terms of time and
+ // space complexity as the input size increases.
+
+
+// Linear Search
+// Best Case:O(1) 
+// Average Case:O(n)
+// Worst Case:O(n) 
+
+// Binary Search
+// Best Case:O(1) 
+// Average Case:O(log n)
+// Worst Case:O(log n)
+
+//Binary Search is more suitable for an e-commerce platform because it has a time complexity of O(log n), making it 
+// much faster than Linear Search for large product catalogs.
+
+
 import java.util.*;
 
 
