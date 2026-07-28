@@ -4,10 +4,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.cognizant</groupId>
-  <artifactId>JUnit_Basic_Testing</artifactId>
+  <artifactId>Exercise3_Assertions</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <name>JUnit_Basic_Testing</name>
+  <name>Exercise3_Assertions</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
