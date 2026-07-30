@@ -1,3 +1,37 @@
+// below is exercise 1
+
+// package com.library.service;
+
+// import com.library.repository.BookRepository;
+
+// public class BookService {
+
+//     private BookRepository bookRepository;
+
+//     public void setBookRepository(BookRepository bookRepository) {
+//         this.bookRepository = bookRepository;
+//     }
+
+//     public void displayService() {
+
+//         System.out.println("Book Service Created");
+
+//         bookRepository.displayRepository();
+
+//     }
+
+// }
+
+
+
+
+
+
+
+//exercise 2 is below updated
+
+
+
 package com.library.service;
 
 import com.library.repository.BookRepository;
@@ -11,11 +45,7 @@ public class BookService {
     }
 
     public void displayService() {
-
-        System.out.println("Book Service Created");
-
+        System.out.println("BookService bean created.");
         bookRepository.displayRepository();
-
     }
-
 }
