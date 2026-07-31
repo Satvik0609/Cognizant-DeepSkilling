@@ -1,0 +1,57 @@
+JPA
+
+- Specification (Java standard) for persisting, reading, and managing data from Java objects.
+
+- No implementation itself. Needs a provider like Hibernate.
+
+- We work with EntityManager.
+
+
+Hibernate
+
+- Implementation of JPA and also provides extra ORM features.
+
+- You manually manage sessions and transactions.
+
+- More boilerplate code.
+
+Example Hibernate Code:
+
+public Integer addEmployee(Employee employee) {
+    Session session = factory.openSession();
+    Transaction tx = null;
+    Integer employeeID = null;
+
+    try {
+        tx = session.beginTransaction();
+        employeeID = (Integer) session.save(employee);
+        tx.commit();
+    } catch (HibernateException e) {
+        if (tx != null) tx.rollback();
+        e.printStackTrace();
+    } finally {
+        session.close();
+    }
+    return employeeID;
+}
+
+
+Spring Data JPA
+
+- Not a JPA implementation itself. Provides an abstraction over JPA providers (like Hibernate).
+
+- Reduces boilerplate code significantly.
+
+- Automatically manages transactions and integrates with Spring.
+
+Example Spring Data JPA Code:
+
+public interface EmployeeRepository extends JpaRepository<Employee, Integer> { }
+
+@Autowired
+private EmployeeRepository employeeRepository;
+
+@Transactional
+public void addEmployee(Employee employee) {
+    employeeRepository.save(employee);
+}
